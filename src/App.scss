@@ -1,0 +1,32 @@
+@import 'mixins';
+@import 'variables';
+
+@for $i from 1 through 6 {
+  #button#{$i} { background-color: nth($colours, $i)}
+}
+
+.App {
+  
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: $background;
+  color: $textcolour;
+  @include transform(rotate(0deg));
+
+}
+
+.Child {
+  padding-top: 20%;
+}
+
+button {
+  @include text-effect(danger);
+}

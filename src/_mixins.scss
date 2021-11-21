@@ -1,0 +1,27 @@
+@mixin transform($property) {
+    -webkit-transform: $property;
+    --ms-transform: $property;
+    transform: $property;
+  }
+  
+  @mixin text-effect($val) {
+    @if $val == danger {
+      color: red;
+    }
+    @else if $val == alert {
+      color: yellow;
+    }
+    @else if $val == success {
+      color: green;
+    }
+    @else {
+      color: black;
+    }
+  }
+
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-550%, -50%);
+}
